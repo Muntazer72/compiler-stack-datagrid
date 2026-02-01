@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 02 - Muntazer Mahdi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div id="startup-overlay">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <h1 class="welcome-text">Initializing Task 02...</h1>
+            <p class="author-info">Muntazer Mahdi | 2023-CS-72</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header class="dashboard-header">
+            <h2>System Architecture & Stack Management</h2>
+            <div class="user-badge">MNS-UET Session 2023–2027</div>
+        </header>
+        
+        <div class="card">
+            <form action="/push" method="post" class="input-group">
+                <input type="text" name="item" placeholder="Insert Token/Value into Grid..." required autofocus>
+                <button type="submit" class="btn-push">Push to Stack</button>
+            </form>
+
+            <form action="/pop" method="post">
+                <button type="submit" class="btn-pop">Pop from Stack</button>
+            </form>
+        </div>
+
+        <div class="grid-container">
+            <h3>DataGridView Implementation</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stack Pointer</th>
+                        <th>Value / Lexeme</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if not stack %}
+                    <tr><td colspan="2" class="empty-msg">Stack memory is empty. Please push data.</td></tr>
+                    {% endif %}
+                    {% for i in range(stack|length - 1, -1, -1) %}
+                    <tr class="row-animate">
+                        <td><strong>SP[{{ i }}]</strong></td>
+                        <td>{{ stack[i] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const overlay = document.getElementById('startup-overlay');
+            
+            // Check if this is the first load of the session
+            // If it is, show for 1 second and fade out
+            setTimeout(() => {
+                overlay.style.opacity = '0';
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 500); // Wait for fade transition
+            }, 1000); // 1 Second Startup duration
+        });
+    </script>
+</body>
+</html>

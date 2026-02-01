@@ -1,0 +1,79 @@
+/* Startup Overlay Styles */
+#startup-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #0f172a; /* Deep Dark Blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 0.5s ease;
+}
+
+.loader-content { text-align: center; color: white; }
+
+.spinner {
+    width: 50px; height: 50px;
+    border: 5px solid rgba(255,255,255,0.1);
+    border-top: 5px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Main UI Styles */
+body {
+    background-color: #f1f5f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.main-content { padding: 40px; max-width: 800px; margin: 0 auto; }
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #3b82f6;
+    margin-bottom: 30px;
+}
+
+.user-badge { background: #e2e8f0; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.input-group { display: flex; gap: 10px; margin-bottom: 15px; }
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+}
+
+input[type="text"]:focus { border-color: #3b82f6; }
+
+button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-push { background: #3b82f6; color: white; width: 100%; margin-bottom: 10px; }
+.btn-pop { background: #ef4444; color: white; width: 100%; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; border-radius: 8px; overflow: hidden; }
+th { background: #1e293b; color: white; padding: 15px; text-align: left; }
+td { padding: 15px; border-bottom: 1px solid #f1f5f9; }
+.empty-msg { color: #94a3b8; font-style: italic; }
