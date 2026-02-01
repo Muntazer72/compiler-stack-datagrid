@@ -91,5 +91,3 @@ Open `http://127.0.0.1:5000` in your web browser.
 ## 📜 License
 
 This project was developed for educational purposes as part of the Compiler Construction Lab at MNS-UET.
-
-```
