@@ -1,6 +1,3 @@
----
-
-```markdown
 # Compiler Construction - Lab Activity 02
 ### Stack Data Structure & DataGridView Implementation
 
@@ -44,50 +41,3 @@ This project is a web-based implementation of core concepts required for designi
    ```bash
    git clone [https://github.com/Muntazer72/compiler-stack-datagrid.git](https://github.com/Muntazer72/compiler-stack-datagrid.git)
    cd compiler-stack-datagrid
-
-```
-
-2. **Set Up a Virtual Environment:**
-```bash
-python -m venv venv
-# Activate on Windows:
-.\venv\Scripts\activate
-
-```
-
-
-3. **Install Dependencies:**
-```bash
-pip install -r requirements.txt
-
-```
-
-
-4. **Launch the Server:**
-```bash
-python app.py
-
-```
-
-
-Open `http://127.0.0.1:5000` in your web browser.
-
----
-
-## 📸 Project Structure
-
-```text
-├── app.py              # Main Flask Application logic
-├── requirements.txt    # Project dependencies
-├── static/
-│   └── style.css       # Professional UI Styling
-└── templates/
-    └── index.html      # Structure with Splash Screen & DataGrid
-
-```
-
----
-
-## 📜 License
-
-This project was developed for educational purposes as part of the Compiler Construction Lab at MNS-UET.
