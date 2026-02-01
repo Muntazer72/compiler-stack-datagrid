@@ -1,7 +1,3 @@
-To make your GitHub repository stand out to your instructors and peers, your **README.md** should be clean, technical, and well-organized.
-
-Create a file named `README.md` in your project folder and paste the content below:
-
 ---
 
 ```markdown
@@ -95,18 +91,5 @@ Open `http://127.0.0.1:5000` in your web browser.
 ## 📜 License
 
 This project was developed for educational purposes as part of the Compiler Construction Lab at MNS-UET.
-
-```
-
----
-
-### Why this is a "High-End" README:
-* **Visual Hierarchy:** It uses emojis and clear headers to guide the reader's eye.
-* **Technical Detail:** It explicitly mentions the "Stack Pointer" and "LIFO" logic, which shows you understand the underlying Compiler Construction concepts.
-* **Clear Instructions:** Anyone (including your professor) can download and run your code in seconds.
-
-
-
-**Would you like me to help you create a "Demo" video or a GIF of your app running to add to this README as well?**
 
 ```
